@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Vision
+import CameraOCR
 
 struct WriteView: View {
      
@@ -25,14 +26,17 @@ struct WriteView: View {
     var body: some View {
         baseView()
             .fullScreenCover(isPresented: $isCameraPicker) {
-                CameraView()
+                CameraView() { ocrText in
+                    print(ocrText)
+                }
             }
             .sheet(isPresented: $isPhotoPicker) {
-                TextRecognitionView(mode: .photo) 
+                //TextRecognitionView(mode: .photo)
+                PhotoPickerView(image: $croppedImage, isLoading: $cropperShown)
             }
-            .sheet(isPresented: $isCropPicker) {
-                ImageCroppingView(shown: $cropperShown, image: originalImage!, croppedImage: $croppedImage)
-            }
+//            .sheet(isPresented: $isCropPicker) {
+//                ImageCroppingView(shown: $cropperShown, image: originalImage!, croppedImage: $croppedImage)
+//            }
         
     }
     
