@@ -39,15 +39,15 @@ struct PhotoPickerView: UIViewControllerRepresentable {
         }
 
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-            //picker.dismiss(animated: true) // 1
+            picker.dismiss(animated: true)
                     
-            let itemProvider = results.first?.itemProvider // 2
+            let itemProvider = results.first?.itemProvider
             
             if let itemProvider = itemProvider,
-               itemProvider.canLoadObject(ofClass: UIImage.self) { // 3
-                itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in // 4
+               itemProvider.canLoadObject(ofClass: UIImage.self) {
+                itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
                     DispatchQueue.main.async {
-                        self.parent.image = image as? UIImage // 5
+                        self.parent.image = image as? UIImage 
                         //self.parent.isLoading = false
                     } 
                 }

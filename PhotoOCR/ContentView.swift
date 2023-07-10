@@ -7,10 +7,11 @@
 
 import SwiftUI
 import PhotosUI
+import CameraOCR
 
 struct ContentView: View {
     var body: some View {
-        MainView()
+        WriteView()
     }
 }
 

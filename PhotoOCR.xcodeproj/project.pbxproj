@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4046FB0B2A5AFFF2000728CE /* CameraOCR in Frameworks */ = {isa = PBXBuildFile; productRef = 4046FB0A2A5AFFF2000728CE /* CameraOCR */; };
 		405BDED32A26CE3F005C90CC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405BDED02A26CE3F005C90CC /* CameraViewModel.swift */; };
 		405BDED42A26CE3F005C90CC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405BDED12A26CE3F005C90CC /* CameraView.swift */; };
 		405BDED72A26D9BE005C90CC /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405BDED62A26D9BE005C90CC /* CameraPreviewView.swift */; };
@@ -19,11 +20,11 @@
 		40A760FF2A1EE1A800180626 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A760FE2A1EE1A800180626 /* WriteView.swift */; };
 		40A761032A1EF4EA00180626 /* CameraTextRecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A761022A1EF4EA00180626 /* CameraTextRecognitionView.swift */; };
 		40A761052A1EFC4700180626 /* CameraPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A761042A1EFC4700180626 /* CameraPickerView.swift */; };
-		40A761072A1F057A00180626 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A761062A1F057A00180626 /* MainView.swift */; };
 		40A7610F2A2039C500180626 /* ImageCroppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A7610E2A2039C500180626 /* ImageCroppingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4046FB082A5AFFCB000728CE /* CameraOCR */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CameraOCR; sourceTree = "<group>"; };
 		405BDED02A26CE3F005C90CC /* CameraViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		405BDED12A26CE3F005C90CC /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		405BDED62A26D9BE005C90CC /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		40A760FE2A1EE1A800180626 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		40A761022A1EF4EA00180626 /* CameraTextRecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTextRecognitionView.swift; sourceTree = "<group>"; };
 		40A761042A1EFC4700180626 /* CameraPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPickerView.swift; sourceTree = "<group>"; };
-		40A761062A1F057A00180626 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		40A7610D2A1FC1A900180626 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		40A7610E2A2039C500180626 /* ImageCroppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCroppingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,12 +47,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4046FB0B2A5AFFF2000728CE /* CameraOCR in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4046FB092A5AFFF2000728CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		405BDEC12A2637A2005C90CC /* CameraPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,8 +99,10 @@
 		40A760DF2A1E3ABF00180626 = {
 			isa = PBXGroup;
 			children = (
+				4046FB082A5AFFCB000728CE /* CameraOCR */,
 				40A760EA2A1E3ABF00180626 /* PhotoOCR */,
 				40A760E92A1E3ABF00180626 /* Products */,
+				4046FB092A5AFFF2000728CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,7 +122,6 @@
 				40A7610D2A1FC1A900180626 /* Info.plist */,
 				40A760EB2A1E3ABF00180626 /* PhotoOCRApp.swift */,
 				40A760ED2A1E3ABF00180626 /* ContentView.swift */,
-				40A761062A1F057A00180626 /* MainView.swift */,
 				40A760FD2A1EE0DB00180626 /* View */,
 			);
 			path = PhotoOCR;
@@ -155,6 +164,9 @@
 			dependencies = (
 			);
 			name = PhotoOCR;
+			packageProductDependencies = (
+				4046FB0A2A5AFFF2000728CE /* CameraOCR */,
+			);
 			productName = PhotoOCR;
 			productReference = 40A760E82A1E3ABF00180626 /* PhotoOCR.app */;
 			productType = "com.apple.product-type.application";
@@ -210,7 +222,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				40A760EE2A1E3ABF00180626 /* ContentView.swift in Sources */,
-				40A761072A1F057A00180626 /* MainView.swift in Sources */,
 				40A7610F2A2039C500180626 /* ImageCroppingView.swift in Sources */,
 				405BDED32A26CE3F005C90CC /* CameraViewModel.swift in Sources */,
 				40A761052A1EFC4700180626 /* CameraPickerView.swift in Sources */,
@@ -425,6 +436,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4046FB0A2A5AFFF2000728CE /* CameraOCR */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CameraOCR;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 40A760E02A1E3ABF00180626 /* Project object */;
 }
